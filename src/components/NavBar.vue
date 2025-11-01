@@ -40,12 +40,12 @@
     <!-- Mobile Nav -->
     <nav v-if="menuOpen"
          class="absolute top-full left-0 w-full bg-[#f8f5f1] border-t border-gray-300 shadow-md flex flex-col text-center space-y-3 py-4 md:hidden z-50">
-      <router-link :to="{name:'home'}" class="hover:text-green-800 transition">Qur'anic Wisdom</router-link>
-      <router-link :to="{name:'prophecies'}" class="hover:text-green-800 transition">Prophecies</router-link>
+      <router-link @click="menuOpen = false" :to="{name:'home'}" class="hover:text-green-800 transition">Qur'anic Wisdom</router-link>
+      <router-link @click="menuOpen = false" :to="{name:'proficies'}" class="hover:text-green-800 transition">Prophecies</router-link>
 
-      <router-link :to="{name:'about'}" class="hover:text-green-800 transition">About</router-link>
+      <router-link @click="menuOpen = false" :to="{name:'about'}" class="hover:text-green-800 transition">About</router-link>
       <div class="flex justify-center">
-        <button @click="store.toggleLang" class="p-2 rounded-full hover:bg-gray-200 transition">
+        <button @click="store.toggleLang , menuOpen = false"  class="p-2 rounded-full hover:bg-gray-200 transition">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                stroke-width="1.5" stroke="currentColor" class="size-6 text-green-900">
             <path stroke-linecap="round" stroke-linejoin="round"
