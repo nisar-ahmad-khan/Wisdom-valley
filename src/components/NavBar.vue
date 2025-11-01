@@ -45,7 +45,7 @@
 
       <router-link @click="menuOpen = false" :to="{name:'about'}" class="hover:text-green-800 transition">About</router-link>
       <div class="flex justify-center">
-        <button @click="store.toggleLang , menuOpen = false"  class="p-2 rounded-full hover:bg-gray-200 transition">
+        <button @click="store.toggleLang "  class="p-2 rounded-full hover:bg-gray-200 transition">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                stroke-width="1.5" stroke="currentColor" class="size-6 text-green-900">
             <path stroke-linecap="round" stroke-linejoin="round"
